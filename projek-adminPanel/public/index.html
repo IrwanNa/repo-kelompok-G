@@ -2,22 +2,88 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Panel Admin</title>
+    <title>Admin | Pesanan Baru</title>
   </head>
   <body>
     <div class="bg-gray-500 text-sm text-white rounded-md p-4" role="alert">
       <span class="font-bold">Secondary</span> alert! You should check in on
       some of those fields below.
     </div>
-    <h1 class="font-mono text-6xl bg-purple-300">
-      Ini Adalah Halaman Admin Panel
-    </h1>
-    <br />
-    <p class="text-5xl mx-5">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut assumenda
-      odit reprehenderit a. Laborum dolores necessitatibus nisi quam repudiandae
-      perferendis alias mollitia atque sunt nobis?
-    </p>
+    <div class="bg-gray-800 text-white p-2">
+      <p class="font-sans text-right px-10"><a href="#">Logout</a></p>
+      <h2 class="text-3xl font-sans">Panel Admin</h2>
+    </div>
+    <div class="flex">
+      <div class="w-1/4 bg-gray-800 min-h-screen">
+        <ul class="py-4">
+          <li class="px-4 py-2 hover:bg-gray-700">
+            <a href="index.html" class="block text-white hover:text-gray-300"
+              >Data Pesanan</a
+            >
+          </li>
+          <li class="px-4 py-2 hover:bg-gray-700">
+            <a
+              href="dtPelanggan.html"
+              class="block text-white hover:text-gray-300"
+              >Data Pelanggan</a
+            >
+          </li>
+          <li class="px-4 py-2 hover:bg-gray-700">
+            <a href="psBaru.html" class="block text-white hover:text-gray-300"
+              >Pesanan Baru</a
+            >
+          </li>
+          <li class="px-4 py-2 hover:bg-gray-700">
+            <a
+              href="pembayaran.html"
+              class="block text-white hover:text-gray-300"
+              >Pembayaran</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="w-3/4 p-4">
+        <div class="bg-white p-4 rounded-lg shadow-md">
+          <h1 class="text-2xl font-semibold mb-4">Pesanan Baru</h1>
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="bg-gray-200">
+                <th class="p-2">No Pelanggan</th>
+                <th class="p-2">Nama Pelanggan</th>
+                <th class="p-2">Total Bayar</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              <tr class="border-b">
+                <td class="p-2">1</td>
+                <td class="p-2">Asep</td>
+                <td class="p-2">25.000</td>
+              </tr>
+              <tr class="border-b">
+                <td class="p-2">2</td>
+                <td class="p-2">Ridwan</td>
+                <td class="p-2">17.500</td>
+              </tr>
+              <tr class="border-b">
+                <td class="p-2">3</td>
+                <td class="p-2">Ayu</td>
+                <td class="p-2">15.000</td>
+              </tr>
+              <tr class="border-b">
+                <td class="p-2">4</td>
+                <td class="p-2">Syifa</td>
+                <td class="p-2">20.000</td>
+              </tr>
+              <tr class="border-b">
+                <td class="p-2">5</td>
+                <td class="p-2">Risna</td>
+                <td class="p-2">18.500</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
 
     <script src="../node_modules/preline/dist/preline.js"></script>
   </body>
