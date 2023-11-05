@@ -880,3 +880,6 @@ video {
     padding: 1.25rem;
   }
 }
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
