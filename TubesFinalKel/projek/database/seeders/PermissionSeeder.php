@@ -31,6 +31,5 @@ class PermissionSeeder extends Seeder
 
         $role_admin->givePermissionTo($permission);
 
-        $user
     }
 }
