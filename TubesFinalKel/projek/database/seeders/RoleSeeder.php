@@ -13,7 +13,7 @@ class RoleSeeder extends Seeder
      */
     public function run(): void
     {
-        Role::updateOrCreate(
+        $role_admin = Role::updateOrCreate(
             [
                 'name' => 'admin',
             
@@ -21,7 +21,7 @@ class RoleSeeder extends Seeder
             ['name' => 'admin']
         );
 
-        Role::updateOrCreate(
+        $role_supervisor = Role::updateOrCreate(
             [
                 'name' => 'supervisor',
             
@@ -29,7 +29,7 @@ class RoleSeeder extends Seeder
             ['name' => 'supervisor']
         );
 
-        Role::updateOrCreate(
+        $role_kasir = Role::updateOrCreate(
             [
                 'name' => 'kasir',
             
@@ -37,7 +37,7 @@ class RoleSeeder extends Seeder
             ['name' => 'kasir']
         );
 
-        Role::updateOrCreate(
+        $role_gudang = Role::updateOrCreate(
             [
                 'name' => 'gudang',
             
