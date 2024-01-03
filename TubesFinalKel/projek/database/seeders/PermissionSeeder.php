@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
+use App\Models\User;
 
 class PermissionSeeder extends Seeder
 {
@@ -71,6 +72,12 @@ class PermissionSeeder extends Seeder
         $role_admin->givePermissionTo($permission);
         $role_admin->givePermissionTo($permission2);
         $role_supervisor->givePermissionTo($permission2);
+
+        // memberikan hak role ke user
+
+        $user = User::find(1);
+
+        $user->assignRole(['admin', 'supervisor']);
 
     }
 }
