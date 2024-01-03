@@ -14,12 +14,8 @@ class PermissionSeeder extends Seeder
      */
     public function run(): void
     {
-        $permission = Permission::updateOrCreate(
-            [
-                'name' => 'view_stok',
-            ],
-            ['name' => 'view_stok']
-        );
+
+        // Role yang ada sesuai studi kasus
 
         $role_admin = Role::updateOrCreate(
             [
@@ -29,7 +25,52 @@ class PermissionSeeder extends Seeder
             ['name' => 'admin']
         );
 
+        $role_supervisor = Role::updateOrCreate(
+            [
+                'name' => 'supervisor',
+            
+            ],
+            ['name' => 'supervisor']
+        );
+
+        $role_kasir = Role::updateOrCreate(
+            [
+                'name' => 'kasir',
+            
+            ],
+            ['name' => 'kasir']
+        );
+
+        $role_gudang = Role::updateOrCreate(
+            [
+                'name' => 'gudang',
+            
+            ],
+            ['name' => 'gudang']
+        );
+
+        // Permisssion untuk diakses role
+
+        $permission = Permission::updateOrCreate(
+            [
+                'name' => 'view_stok',
+            ],
+            ['name' => 'view_stok']
+        );
+
+        $permission2 = Permission::updateOrCreate(
+            [
+                'name' => 'view_cetaklaporan',
+            ],
+            ['name' => 'view_cetaklaporan']
+        );
+
+
+        // Memberikan permission sesuai role
+
         $role_admin->givePermissionTo($permission);
+        $role_admin->givePermissionTo($permission2);
+        $role_supervisor->givePermissionTo($permission2);
 
     }
 }
