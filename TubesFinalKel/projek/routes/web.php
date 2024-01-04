@@ -18,6 +18,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/barangTersedia', function () {
+    return view('barangTersedia');
+})->middleware(['auth', 'verified'])->name('barangTersedia');
+
+Route::get('/barangHabis', function () {
+    return view('barangHabis');
+})->middleware(['auth', 'verified'])->name('barangHabis');
+
+Route::get('/barangMasuk', function () {
+    return view('barangMasuk');
+})->middleware(['auth', 'verified'])->name('barangMasuk');
+
+Route::get('/barangKeluar', function () {
+    return view('barangKeluar');
+})->middleware(['auth', 'verified'])->name('barangKeluar');
+
+Route::get('/cetakTransaksi', function () {
+    return view('cetakTransaksi');
+})->middleware(['auth', 'verified'])->name('cetakTransaksi');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

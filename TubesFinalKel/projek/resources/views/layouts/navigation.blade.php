@@ -17,27 +17,27 @@
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('barangTersedia')" :active="request()->routeIs('barangTersedia')">
                         {{ __('Barang Tersedia') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('barangHabis')" :active="request()->routeIs('barangHabis')">
                         {{ __('Barang Habis') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('barangMasuk')" :active="request()->routeIs('barangMasuk')">
                         {{ __('Barang Masuk') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('barangKeluar')" :active="request()->routeIs('barangKeluar')">
                         {{ __('Barang Keluar') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('cetakTransaksi')" :active="request()->routeIs('cetakTransaksi')">
                         {{ __('Cetak Transaksi') }}
                     </x-nav-link>
                 </div>
