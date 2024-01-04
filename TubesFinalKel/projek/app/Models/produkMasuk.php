@@ -9,7 +9,7 @@ class produkMasuk extends Model
 {
     use HasFactory;
 
-    protected $filabel = [
+    protected $fillable = [
         'namaProduk',
         'jumlahMasuk',
         'jenis'

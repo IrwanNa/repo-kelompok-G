@@ -35,6 +35,8 @@ Route::get('/barangHabis', function () {
 Route::middleware('auth')->group(function () {
 
     Route::get('/barangMasuk', [produkMasukController::class, 'index'])->name('barangMasuk');
+    Route::get('/barangMasuk/create', [produkMasukController::class, 'create'])->name('barangMasuk.create');
+    Route::post('/barangMasuk', [produkMasukController::class, 'store'])->name('barangMasuk.store');
 });
 
 Route::get('/barangKeluar', function () {
