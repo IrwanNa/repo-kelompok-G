@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\produkMasukController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,9 +28,14 @@ Route::get('/barangHabis', function () {
     return view('barangHabis');
 })->middleware(['auth', 'verified'])->name('barangHabis');
 
-Route::get('/barangMasuk', function () {
-    return view('barangMasuk');
-})->middleware(['auth', 'verified'])->name('barangMasuk');
+// Route::get('/barangMasuk', function () {
+//     return view('barangMasuk');
+// })->middleware(['auth', 'verified'])->name('barangMasuk');
+
+Route::middleware('auth')->group(function () {
+
+    Route::get('/barangMasuk', [produkMasukController::class, 'index'])->name('barangMasuk');
+});
 
 Route::get('/barangKeluar', function () {
     return view('barangKeluar');
