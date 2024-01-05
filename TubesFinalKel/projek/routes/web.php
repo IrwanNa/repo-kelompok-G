@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\produkMasukController;
+use App\Http\Controllers\produkKeluarController;
+use App\Http\Controllers\produkTersedia;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,9 +41,16 @@ Route::middleware('auth')->group(function () {
     Route::post('/barangMasuk', [produkMasukController::class, 'store'])->name('barangMasuk.store');
 });
 
-Route::get('/barangKeluar', function () {
-    return view('barangKeluar');
-})->middleware(['auth', 'verified'])->name('barangKeluar');
+Route::middleware('auth')->group(function () {
+
+    Route::get('/barangKeluar', [produkKeluarController::class, 'index'])->name('barangKeluar');
+    Route::get('/barangKeluar/create', [produkKeluarController::class, 'create'])->name('barangKeluar.create');
+    Route::post('/barangKeluar', [produkKeluarController::class, 'store'])->name('barangKeluar.store');
+});
+
+// Route::get('/barangKeluar', function () {
+//     return view('barangKeluar');
+// })->middleware(['auth', 'verified'])->name('barangKeluar');
 
 Route::get('/cetakTransaksi', function () {
     return view('cetakTransaksi');
