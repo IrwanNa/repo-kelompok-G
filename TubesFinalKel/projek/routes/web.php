@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\produkMasukController;
 use App\Http\Controllers\produkKeluarController;
-use App\Http\Controllers\produkTersedia;
+use App\Http\Controllers\TransaksiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,9 +55,13 @@ Route::middleware('auth')->group(function () {
 //     return view('barangKeluar');
 // })->middleware(['auth', 'verified'])->name('barangKeluar');
 
-Route::get('/cetakTransaksi', function () {
-    return view('cetakTransaksi');
-})->middleware(['auth', 'verified'])->name('cetakTransaksi');
+Route::middleware('auth')->group(function () {
+    Route::get('/cetakTransaksi', [TransaksiController::class, 'index'])->name('cetakTransaksi');
+});
+
+// Route::get('/cetakTransaksi', function () {
+//     return view('cetakTransaksi');
+// })->middleware(['auth', 'verified'])->name('cetakTransaksi');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
