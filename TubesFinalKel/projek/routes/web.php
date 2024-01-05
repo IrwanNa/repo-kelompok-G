@@ -23,12 +23,15 @@ Route::get('/', function () {
 
 
 Route::get('/barangTersedia', function () {
-    return view('barangTersedia');
+    return view('barangTersedia.index');
 })->middleware(['auth', 'verified'])->name('barangTersedia');
 
+
+
 Route::get('/barangHabis', function () {
-    return view('barangHabis');
+    return view('barangHabis/index');
 })->middleware(['auth', 'verified'])->name('barangHabis');
+
 
 // Route::get('/barangMasuk', function () {
 //     return view('barangMasuk');
